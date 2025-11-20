@@ -17,17 +17,14 @@
     html,body{height:100%;}
     body{
       margin:0;
-      font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background: radial-gradient(1000px 400px at 10% 10%, rgba(212,175,55,0.06), transparent), linear-gradient(135deg,var(--bg1),var(--bg2));
+      font-family: 'Montserrat', system-ui;
+      background: 
+        url("https://i.makeagif.com/media/12-25-2016/LhBg7K.gif") center/cover no-repeat fixed,
+        radial-gradient(1000px 400px at 10% 10%, rgba(212,175,55,0.06), transparent),
+        linear-gradient(135deg,var(--bg1),var(--bg2));
       color: #fff;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
       padding:40px;
       box-sizing:border-box;
-       background: 
-    url("https://i.makeagif.com/media/12-25-2016/LhBg7K.gif") center/cover no-repeat fixed,
-    radial-gradient(1000px 400px at 10% 10%, rgba(212,175,55,0.06), transparent),
-    linear-gradient(135deg,var(--bg1),var(--bg2));
     }
 
     .wrap{max-width:1200px;margin:0 auto;}
@@ -40,7 +37,6 @@
     .circle-photo img{width:100%;height:100%;object-fit:cover;}
 
     h1{font-family:'Playfair Display', serif;margin:0;font-size:28px;letter-spacing:0.6px}
-    p.lead{margin:2px 0 0;color:var(--muted);font-size:13px}
 
     .card{
       background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
@@ -54,23 +50,39 @@
     .table-wrap{overflow:auto;margin-top:16px}
     table{width:100%;border-collapse:collapse;min-width:980px}
     thead th{
-      text-align:left;padding:14px 12px;font-size:13px;color:var(--accent);font-weight:600;border-bottom:1px solid rgba(255,255,255,0.04);background:linear-gradient(180deg, rgba(212,175,55,0.02), transparent)
+      text-align:left;padding:14px 12px;font-size:13px;color:var(--accent);font-weight:600;
+      border-bottom:1px solid rgba(255,255,255,0.04);
+      background:linear-gradient(180deg, rgba(212,175,55,0.02), transparent)
     }
     tbody td{padding:12px;font-size:14px;color:#fff;border-bottom:1px dashed rgba(255,255,255,0.03)}
-
     tbody tr:nth-child(odd){background:linear-gradient(90deg, rgba(255,255,255,0.01), transparent)}
 
-    .muted{color:var(--muted);font-size:13px}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(212,175,55,0.12);color:var(--accent);font-weight:600;font-size:13px}
-
-    @media (max-width:980px){table{min-width:720px}}
-    @media (max-width:720px){body{padding:18px}header{flex-direction:column;align-items:flex-start;gap:8px}.circle-photo{width:64px;height:64px}}
-    .right{text-align:right}
-    .center{text-align:center}
+    /* ANIMACIÓN DORADA */
+    @keyframes brilloCuadro {
+      0% { box-shadow: 0 0 10px rgba(212,175,55,0.3); }
+      50% { box-shadow: 0 0 28px rgba(255,215,120,0.85); }
+      100% { box-shadow: 0 0 10px rgba(212,175,55,0.3); }
+    }
+    .cuadro-brenda {
+      margin: 28px auto;
+      padding: 18px 26px;
+      width: fit-content;
+      font-size: 24px;
+      font-weight: 700;
+      color: #d4af37;
+      border: 2px solid #d4af37;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(6px);
+      animation: brilloCuadro 2.2s infinite ease-in-out;
+      text-align:center;
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
+
     <header>
       <div class="circle-photo">
         <img src="https://www.pngmart.com/files/23/Telegram-Logo-PNG-Image.png" alt="Foto perfil" />
@@ -93,127 +105,26 @@
               <th>Enviado</th>
             </tr>
           </thead>
+
           <tbody>
-            <tr>
-              <td>Brenda</td>
-              <td>$20.00</td>
-              <td>11/11/2025</td>
-              <td>5 minutos</td>
-              <td>PAYPAL</td>
-              <td>Listo</td>
-            </tr>
-
-
-
-                <tr>
-              <td>Brenda</td>
-              <td>$10.00</td>
-              <td>11/12/2025</td>
-              <td>10 minutos</td>
-              <td>PAYPAL</td>
-              <td>Listo</td>
-            </tr>
-
-
-
-            
-                <tr>
-              <td>Brenda</td>
-              <td>$20.00</td>
-              <td>11/12/2025</td>
-              <td>10 minutos</td>
-              <td>PAYPAL</td>
-              <td>Listo</td>
-            </tr>
-
-             <tr>
-              <td>Brenda</td>
-              <td>$5.00</td>
-              <td>11/14/2025</td>
-              <td>5 minutos</td>
-              <td>PAYPAL</td>
-              <td>Listo</td>
-            </tr>
-
-   <tr>
-              <td>Brenda</td>
-              <td>$10.00</td>
-              <td>11/15/2025</td>
-              <td>10 minutos</td>
-              <td>PAYPAL</td>
-              <td>Listo</td>
-            </tr>
-
- <tr>
-              <td>Brenda</td>
-              <td>$5.00</td>
-              <td>11/15/2025</td>
-              <td>10 minutos</td>
-              <td>PAYPAL</td>
-              <td>Listo</td>
-            </tr>
-
-
-            <tr>
-              <td>Brenda</td>
-              <td>$5.00</td>
-              <td>11/16/2025</td>
-              <td>5 minutos</td>
-              <td>PAYPAL</td>
-              <td>Listo</td>
-            </tr>
-
-
-               <tr>
-              <td>Brenda</td>
-              <td>$10.00</td>
-              <td>11/17/2025</td>
-              <td>--- minutos</td>
-              <td>PAYPAL</td>
-              <td>Listo</td>
-            </tr>
-
-                   <tr>
-              <td>Brenda</td>
-              <td>$5.00</td>
-              <td>11/17/2025</td>
-              <td>--- minutos</td>
-              <td>PAYPAL</td>
-              <td>Listo</td>
-            </tr>
-
+            <tr><td>Brenda</td><td>$20.00</td><td>11/11/2025</td><td>5 minutos</td><td>PAYPAL</td><td>Listo</td></tr>
+            <tr><td>Brenda</td><td>$10.00</td><td>11/12/2025</td><td>10 minutos</td><td>PAYPAL</td><td>Listo</td></tr>
+            <tr><td>Brenda</td><td>$20.00</td><td>11/12/2025</td><td>10 minutos</td><td>PAYPAL</td><td>Listo</td></tr>
+            <tr><td>Brenda</td><td>$5.00</td><td>11/14/2025</td><td>5 minutos</td><td>PAYPAL</td><td>Listo</td></tr>
+            <tr><td>Brenda</td><td>$10.00</td><td>11/15/2025</td><td>10 minutos</td><td>PAYPAL</td><td>Listo</td></tr>
+            <tr><td>Brenda</td><td>$5.00</td><td>11/15/2025</td><td>10 minutos</td><td>PAYPAL</td><td>Listo</td></tr>
+            <tr><td>Brenda</td><td>$5.00</td><td>11/16/2025</td><td>5 minutos</td><td>PAYPAL</td><td>Listo</td></tr>
+            <tr><td>Brenda</td><td>$10.00</td><td>11/17/2025</td><td>--- minutos</td><td>PAYPAL</td><td>Listo</td></tr>
+            <tr><td>Brenda</td><td>$5.00</td><td>11/17/2025</td><td>--- minutos</td><td>PAYPAL</td><td>Listo</td></tr>
+            <tr><td>Brenda</td><td>$5.00</td><td>11/20/2025</td><td>--- minutos</td><td>PAYPAL</td><td>Listo</td></tr>
           </tbody>
         </table>
       </div>
     </div>
 
+    <!-- CUADRO FINAL ABAJO -->
+    <div class="cuadro-brenda">Brenda gana: $95.00</div>
+
   </div>
-
-  <div id="totales" style="
-      margin-top:20px;
-      font-size:14px;
-      font-weight:400;
-      color:var(--accent);
-      text-align:center;
-      opacity:0;
-      transition: opacity 1.5s ease-in-out;
-  "></div>
-
-  <script>
-    const filas = document.querySelectorAll("tbody tr");
-    let totalBrenda = 0;
-
-    filas.forEach(fila => {
-      const ganancia = parseFloat(fila.querySelectorAll("td")[1].textContent.replace('$',''));
-      totalBrenda += ganancia;
-    });
-
-    const divTotales = document.getElementById("totales");
-    divTotales.innerHTML = `Total Brenda Garcia: $${totalBrenda.toFixed(2)}`;
-
-    setTimeout(() => {
-      divTotales.style.opacity = 1;
-    }, 100);
-  </script>
 </body>
 </html>
