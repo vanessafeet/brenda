@@ -57,26 +57,6 @@
     tbody td{padding:12px;font-size:14px;color:#fff;border-bottom:1px dashed rgba(255,255,255,0.03)}
     tbody tr:nth-child(odd){background:linear-gradient(90deg, rgba(255,255,255,0.01), transparent)}
 
-    /* ANIMACIÓN DORADA */
-    @keyframes brilloCuadro {
-      0% { box-shadow: 0 0 10px rgba(212,175,55,0.3); }
-      50% { box-shadow: 0 0 28px rgba(255,215,120,0.85); }
-      100% { box-shadow: 0 0 10px rgba(212,175,55,0.3); }
-    }
-    .cuadro-brenda {
-      margin: 28px auto;
-      padding: 18px 26px;
-      width: fit-content;
-      font-size: 24px;
-      font-weight: 700;
-      color: #d4af37;
-      border: 2px solid #d4af37;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.07);
-      backdrop-filter: blur(6px);
-      animation: brilloCuadro 2.2s infinite ease-in-out;
-      text-align:center;
-    }
   </style>
 </head>
 
@@ -88,7 +68,7 @@
         <img src="https://www.pngmart.com/files/23/Telegram-Logo-PNG-Image.png" alt="Foto perfil" />
       </div>
       <div>
-        <h1>EL SALARIO DE Brenda Garcia</h1>
+        <h1>El Salario de  Brenda Garcia</h1>
       </div>
     </header>
 
@@ -117,14 +97,45 @@
             <tr><td>Brenda</td><td>$10.00</td><td>11/17/2025</td><td>--- minutos</td><td>PAYPAL</td><td>Listo</td></tr>
             <tr><td>Brenda</td><td>$5.00</td><td>11/17/2025</td><td>--- minutos</td><td>PAYPAL</td><td>Listo</td></tr>
             <tr><td>Brenda</td><td>$5.00</td><td>11/20/2025</td><td>--- minutos</td><td>PAYPAL</td><td>Listo</td></tr>
+            <tr><td>Brenda</td><td>$5.00</td><td>11/22/2025</td><td>--- minutos</td><td>PAYPAL</td><td>Listo</td></tr>
+            <tr><td>Brenda</td><td>$5.00</td><td>11/23/2025</td><td>--- minutos</td><td>PAYPAL</td><td>Listo</td></tr>
+            <tr><td>Brenda</td><td>$15.00</td><td>11/23/2025</td><td>--- minutos</td><td>PAYPAL</td><td>Listo</td></tr>
+            <tr><td>Brenda</td><td>$10.00</td><td>11/23/2025</td><td>--- minutos</td><td>PAYPAL</td><td>Listo</td></tr>
+            <tr><td>Brenda</td><td>$15.00</td><td>11/24/2025</td><td>--- minutos</td><td>PAYPAL</td><td>Listo</td></tr>
+
+
+
+
+
+            
           </tbody>
         </table>
       </div>
     </div>
 
-    <!-- CUADRO FINAL ABAJO -->
-    <div class="cuadro-brenda">Brenda gana: $95.00</div>
+    <!-- TOTAL AUTOMÁTICO AQUÍ -->
+    <p id="total" style="color:#d4af37; font-size:26px; font-weight:700; margin-top:25px;"></p>
 
   </div>
+
+  <!-- SCRIPT QUE SUMA AUTOMÁTICAMENTE -->
+  <script>
+    function calcularTotal() {
+      let filas = document.querySelectorAll("tbody tr");
+      let total = 0;
+
+      filas.forEach(fila => {
+        let texto = fila.children[1].innerText.replace("$", "");
+        let numero = parseFloat(texto);
+        if (!isNaN(numero)) total += numero;
+      });
+
+      document.getElementById("total").innerText =
+        "Brenda gana un total de: $" + total.toFixed(2);
+    }
+
+    calcularTotal();
+  </script>
+
 </body>
 </html>
